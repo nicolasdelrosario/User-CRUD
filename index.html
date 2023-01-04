@@ -11,11 +11,70 @@
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./styles.css">
+
+  <!-- Fonts -->
+  <!-- Josefin Sans - Titles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Source Serif Pro - Text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header id="header"></header>
-  <main class="main"></main>
+  <header id="header">
+    <div class="container">
+      <h1 class="title mt-5">Users</h1>
+      <button class="btn btn-primary my-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-user"
+        aria-expanded="false" aria-controls="collapseUser">
+        New User
+      </button>
+      <div id="collapse-user" class="collapse">
+        <div class="mb-3">
+          <input type="text" class="form-control" id="txtName" placeholder="Name">
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control" id="txtLastName" placeholder="Last Name">
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control" id="txtOccupation" placeholder="Occupation">
+        </div>
+        <div class="mb-3">
+          <button id="saveButton" class="btn btn-primary" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapse-user" aria-expanded="false" aria-controls="collapseUser">
+            Guardar
+          </button>
+          <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-user"
+            aria-expanded="false" aria-controls="collapseUser">
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <div class="container">
+      <table class="table">
+        <thead>
+          <th>Name</th>
+          <th>Last Name</th>
+          <th>Occupation</th>
+          <th>Rename</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="userData">
+
+        </tbody>
+      </table>
+
+    </div>
+
+
+  </main>
 
 
 

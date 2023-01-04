@@ -1,0 +1,60 @@
+:root {
+  /* COLORS */
+  --primary: #FF4C60;
+  --secondary: #4B4870;
+  --background: #F9F9FE;
+  --black: #000;
+  --gray: #424851;
+  --purple: #7171e2;
+  --white: #fff;
+
+  /* FONT */
+  --josefine: 'Josefin Sans', sans-serif;
+  --sourceserif: 'Source Serif Pro', serif;
+}
+
+* {
+  background-color: var(--background);
+  font-family: var(--sourceserif);
+  /* font-size: 62.5%; */
+  letter-spacing: 0.5px;
+}
+
+/* header */
+.title {
+  color: var(--secondary);
+  font-family: var(--josefine);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: center;
+}
+
+/* main */
+#main {
+
+}
+
+.table {
+  background: var(--white);
+  box-shadow: 0 3px 12px -1px rgb(7 10 25 / 10%), 0 22px 27px -30px rgb(7 10 25 / 10%);
+  text-align: center;
+}
+
+
+.btn {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 6px;
+}
+
+.btn-primary {
+  background: var(--secondary);
+  border: none;
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--primary);
+}
