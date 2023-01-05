@@ -15,6 +15,7 @@ It includes a simple web interface that communicates with a serverless function 
 - Serverless Function
 - PHP
 - MySQL
+- Vercel
 
 ## Features
 
