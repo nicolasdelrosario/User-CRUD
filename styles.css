@@ -14,6 +14,7 @@
 }
 
 * {
+  /* DEFAULT STYLES */
   background-color: var(--background);
   color: var(--secondary);
   font-family: var(--sourceserif);
@@ -26,6 +27,7 @@
 }
 
 .button {
+  /* BUTTON STYLES */
   border-radius: 6px;
   border: none;
   font-size: 16px;
@@ -36,6 +38,7 @@
 }
 
 .button-primary {
+  /* PRIMARY BUTTON */
   background: var(--secondary);
   color: var(--white);
 }
@@ -46,8 +49,15 @@
 }
 
 .button-dangerous {
+  /* DANGEROUS BUTTON */
   background: var(--primary);
   color: var(--white);
+}
+
+.btn-update,
+.btn-delete {
+  /* UPDATE/DELETE BUTTONS */
+  cursor: pointer;
 }
 
 .form-control {
@@ -59,8 +69,9 @@
   box-shadow: 0 3px 12px -1px rgb(7 10 25 / 10%), 0 22px 27px -30px rgb(7 10 25 / 10%);
 }
 
-/* header */
+/* HEADER */
 .title {
+  /* PAGE TITLE */
   color: var(--secondary);
   font-family: var(--josefine);
   font-size: 40px;
@@ -70,6 +81,7 @@
 }
 
 .sub-title {
+  /* SUBTITLE */
   color: var(--secondary);
   font-family: var(--josefine);
   font-size: 30px;
@@ -78,27 +90,35 @@
   text-align: center;
 }
 
-/* main */
+/* MAIN */
 .table {
+  /* TABLE */
   background: var(--white);
   box-shadow: 0 3px 12px -1px rgb(7 10 25 / 10%), 0 22px 27px -30px rgb(7 10 25 / 10%);
   text-align: center;
 }
 
 .table thead th {
+  /* TABLE HEADER */
   font-family: var(--josefine);
   font-size: 16px;
 }
 
 .table tbody td {
+  /* TABLE BODY */
   font-size: 14px;
 }
 
 .table td i:hover {
+  /* TABLE CELL ICON */
   color: var(--primary);
 }
 
-/* footer */
+/* FOOTER */
 .social-media {
   font-size: 24px;
+}
+
+.social-media a i:hover {
+  color: var(--primary);
 }

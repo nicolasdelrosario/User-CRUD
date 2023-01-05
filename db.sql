@@ -1,4 +1,4 @@
--- creating table user
+-- TABLE STRUCTURE
 create table user (
   iduser int auto_increment NOT NULL,
   name varchar(50) NOT NULL,
@@ -6,7 +6,7 @@ create table user (
   occupation varchar(60) NOT NULL,
 primary key	(iduser));
 
--- original users
+-- INITIAL DATA
 insert into user(name, lastname, occupation) values('Nicolas', 'Del Rosario', 'Frontend Developer');
 insert into user(name, lastname, occupation) values('Debora', 'Abarca', 'Backend Developer');
 insert into user(name, lastname, occupation) values('Karla', 'Hermosilla', 'Designer UI/UX');

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,7 +64,7 @@
           <th>Name</th>
           <th>Last Name</th>
           <th>Occupation</th>
-          <th>Edite</th>
+          <th>Update</th>
           <th>Delete</th>
         </thead>
         <tbody id="userData">
@@ -73,30 +74,30 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="modal-edit" tabindex="-1" aria-labelledby="modalEdit" aria-hidden="true">
+    <div class="modal fade" id="modal-update" tabindex="-1" aria-labelledby="modalUpdate" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h2 class="modal-title sub-title" id="staticBackdropLabel">Edit User</h1>
+            <h2 class="modal-title sub-title" id="staticBackdropLabel">Update User</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <div class="mb-3">
-              <input type="text" class="form-control" id="txtIdUserEdit" readonly>
+            <div class="mb-3 d-none">
+              <input type="text" class="form-control" id="txtIdUserUpdate" readonly>
             </div>
             <div class="mb-3">
-              <input type="text" class="form-control" id="txtNameEdit" placeholder="Name">
+              <input type="text" class="form-control" id="txtNameUpdate" placeholder="Name">
             </div>
             <div class="mb-3">
-              <input type="text" class="form-control" id="txtLastNameEdit" placeholder="LastName">
+              <input type="text" class="form-control" id="txtLastNameUpdate" placeholder="LastName">
             </div>
             <div class="mb-3">
-              <input type="text" class="form-control" id="txtOccupationEdit" placeholder="Occupation">
+              <input type="text" class="form-control" id="txtOccupationUpdate" placeholder="Occupation">
             </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="button btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button id="editButton" type="button" class="button button-primary" data-bs-dismiss="modal">Edit</button>
+            <button id="updateButton" type="button" class="button button-primary" data-bs-dismiss="modal">Update</button>
           </div>
         </div>
       </div>
@@ -111,7 +112,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <div class="mb-3">
+            <div class="mb-3 d-none">
               <input type="text" class="form-control" id="txtIdUserDelete" readonly>
             </div>
             <div class="mb-3">
@@ -126,7 +127,8 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="button btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button id="deleteButton" type="button" class="button button-dangerous" data-bs-dismiss="modal">Delete</button>
+            <button id="deleteButton" type="button" class="button button-dangerous"
+              data-bs-dismiss="modal">Delete</button>
           </div>
         </div>
       </div>
@@ -134,16 +136,16 @@
   </main>
   <footer>
     <div class="container social-media d-flex">
-      <a class="px-3"  href="https://www.linkedin.com/in/nicolasdelrosario/">
+      <a class="px-3" target="_blank" href="https://www.linkedin.com/in/nicolasdelrosario/">
         <i class="bi bi-linkedin"></i>
       </a>
-      <a class="px-3" href="https://github.com/delrosarionicolas">
+      <a class="px-3" target="_blank" href="https://github.com/delrosarionicolas">
         <i class="bi bi-github"></i>
       </a>
-      <a class="px-3" href="https://twitter.com/Potato__Code">
+      <a class="px-3" target="_blank" href="https://twitter.com/Potato__Code">
         <i class="bi bi-twitter"></i>
       </a>
-      <a class="px-3" href="https://www.instagram.com/potatocode_/">
+      <a class="px-3" target="_blank" href="https://www.instagram.com/potatocode_/">
         <i class="bi bi-instagram"></i>
       </a>
     </div>
@@ -157,3 +159,19 @@
 </body>
 
 </html>
+
+<!--
+Página CRUD (create, read, update, delete) de usuarios. Permite añadir nuevos usuarios a una tabla, editar la información de usuarios existentes y eliminar usuarios de la tabla.
+
+Dependencias:
+- Bootstrap (https://getbootstrap.com/): se utiliza para dar estilo a la página y para implementar la funcionalidad de los botones de colapso.
+- Bootstrap Icons (https://icons.getbootstrap.com/): se utilizan para mostrar iconos en la página.
+- Google Fonts (https://fonts.google.com/): se utilizan para cargar las fuentes de letra Josefin Sans y Source Serif Pro.
+
+Estructura de la página:
+- Header: contiene el título de la página y un botón para añadir nuevos usuarios. Al hacer clic en el botón, se muestra un formulario de entrada para ingresar la información del nuevo usuario.
+- Main: contiene una tabla que muestra a todos los usuarios existentes. Cada usuario tiene dos botones para editar o eliminar la información del usuario.
+- Footer: contiene enlaces a las redes sociales de la página. Al pasar el mouse por encima de cada icono, se cambia el color del icono.
+
+Uso de la página:
+- Para añadir un nuevo usuario: haga clic en el botón "New User" en la parte superior de la página. Rellene el formulario de entrada con la información del nuevo usuario y haga clic

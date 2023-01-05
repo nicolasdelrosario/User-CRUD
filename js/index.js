@@ -1,4 +1,9 @@
+// CRUD: CREATE READ UPDATE DELETE
+// Nicolas Robinson Del Rosario Lozano
+// 05/01/22
+
 function user() {
+  // Gets user data from the server and displays it in a table
   const readData = () => {
     const route =
       "https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-63d0eec1-53fa-417b-8052-e630ca4a896b/default/user-php";
@@ -8,6 +13,7 @@ function user() {
   };
   readData();
 
+   // Fills the table with user data
   const fillTable = (data) => {
     let tableContent = "";
     data.forEach((item) => {
@@ -17,7 +23,7 @@ function user() {
           <td>${item.lastname}</td>
           <td>${item.occupation}</td>
           <td>
-            <i class="bi bi-pencil-fill btn-edit" data-bs-toggle="modal" data-bs-target="#modal-edit"></i>
+            <i class="bi bi-pencil-fill btn-update" data-bs-toggle="modal" data-bs-target="#modal-update"></i>
           </td>
           <td>
             <i class="bi bi-x-circle btn-delete" data-bs-toggle="modal" data-bs-target="#modal-delete"></i>
@@ -28,19 +34,17 @@ function user() {
     });
     document.getElementById("userData").innerHTML = tableContent;
 
-    // EDIT USER
-    const btnEditUsers = document.querySelectorAll('.btn-edit');
-    btnEditUsers.forEach((btnEditUser) => {
-      btnEditUser.addEventListener('click', function () {
+    // UPADTE USER
+    const btnUpdateUsers = document.querySelectorAll('.btn-update');
+    btnUpdateUsers.forEach((btnUpdateUser) => {
+      btnUpdateUser.addEventListener('click', function () {
         const actualRow = this.parentElement.parentElement;
         const position = Array.from(actualRow.parentElement.children).indexOf(actualRow);
 
-        document.querySelector('#txtIdUserEdit').value = data[position].iduser;
-        document.querySelector('#txtNameEdit').value = data[position].name;
-        document.querySelector('#txtLastNameEdit').value = data[position].lastname;
-        document.querySelector('#txtOccupationEdit').value = data[position].occupation;
-        console.log(data[position]);
-
+        document.querySelector('#txtIdUserUpdate').value = data[position].iduser;
+        document.querySelector('#txtNameUpdate').value = data[position].name;
+        document.querySelector('#txtLastNameUpdate').value = data[position].lastname;
+        document.querySelector('#txtOccupationUpdate').value = data[position].occupation;
       });
     });
 
@@ -55,8 +59,6 @@ function user() {
         document.querySelector('#txtNameDelete').value = data[position].name;
         document.querySelector('#txtLastNameDelete').value = data[position].lastname;
         document.querySelector('#txtOccupationDelete').value = data[position].occupation;
-        console.log(data[position]);
-
       });
     });
   };
@@ -85,18 +87,18 @@ function user() {
     })
       .then((response) => response.json())
       .then((json) => {
-        console.log(json);
+        // console.log(json);
         readData();
       });
   });
 
 
-  //EDIT USER
-  document.querySelector("#editButton").addEventListener("click", () => {
-    const iduser = document.querySelector("#txtIdUserEdit").value
-    const name = document.querySelector("#txtNameEdit").value;
-    const lastname = document.querySelector("#txtLastNameEdit").value;
-    const occupation = document.querySelector("#txtOccupationEdit").value;
+  //UPDATE USER
+  document.querySelector("#updateButton").addEventListener("click", () => {
+    const iduser = document.querySelector("#txtIdUserUpdate").value
+    const name = document.querySelector("#txtNameUpdate").value;
+    const lastname = document.querySelector("#txtLastNameUpdate").value;
+    const occupation = document.querySelector("#txtOccupationUpdate").value;
 
     const route = "https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-63d0eec1-53fa-417b-8052-e630ca4a896b/default/user-edit-php";
     const _data = {
@@ -113,7 +115,7 @@ function user() {
     })
       .then((response) => response.json())
       .then((json) => {
-        console.log(json);
+        // console.log(json);
         readData();
       });
   });
@@ -134,7 +136,7 @@ function user() {
     })
       .then((response) => response.json())
       .then((json) => {
-        console.log(json);
+        // console.log(json);
         readData();
       });
   });
