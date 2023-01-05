@@ -28,8 +28,8 @@
 <body>
   <header id="header">
     <div class="container">
-      <h1 class="title mt-5">Users</h1>
-      <button class="btn btn-primary my-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-user"
+      <h1 class="title">Users</h1>
+      <button class="button button-primary my-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-user"
         aria-expanded="false" aria-controls="collapseUser">
         New User
       </button>
@@ -44,11 +44,11 @@
           <input type="text" class="form-control" id="txtOccupation" placeholder="Occupation">
         </div>
         <div class="mb-3">
-          <button id="saveButton" class="btn btn-primary" type="button" data-bs-toggle="collapse"
+          <button id="addButton" class="button button-primary" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapse-user" aria-expanded="false" aria-controls="collapseUser">
             Guardar
           </button>
-          <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-user"
+          <button class="button btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-user"
             aria-expanded="false" aria-controls="collapseUser">
             Cerrar
           </button>
@@ -58,12 +58,13 @@
   </header>
   <main id="main">
     <div class="container">
+      <!-- Table -->
       <table class="table">
         <thead>
           <th>Name</th>
           <th>Last Name</th>
           <th>Occupation</th>
-          <th>Rename</th>
+          <th>Edite</th>
           <th>Delete</th>
         </thead>
         <tbody id="userData">
@@ -73,9 +74,85 @@
 
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="modal-edit" tabindex="-1" aria-labelledby="modalEdit" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title sub-title" id="staticBackdropLabel">Edit User</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <input type="text" class="form-control" id="txtIdUserEdit" readonly>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="txtNameEdit" placeholder="Name">
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="txtLastNameEdit" placeholder="LastName">
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="txtOccupationEdit" placeholder="Occupation">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="button btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button id="editButton" type="button" class="button button-primary" data-bs-dismiss="modal">Edit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-delete" tabindex="-1" aria-labelledby="modalDelete" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title sub-title" id="staticBackdropLabel">Delete User</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <input type="text" class="form-control" id="txtIdUserDelete" readonly>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="txtNameDelete" readonly>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="txtLastNameDelete" readonly>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="txtOccupationDelete" readonly>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="button btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button id="deleteButton" type="button" class="button button-dangerous" data-bs-dismiss="modal">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </main>
 
+  <footer>
+    <div class="container social-media d-flex">
+      <a class="px-3"  href="https://www.linkedin.com/in/nicolasdelrosario/">
+        <i class="bi bi-linkedin"></i>
+      </a>
+      <a class="px-3" href="https://github.com/delrosarionicolas">
+        <i class="bi bi-github"></i>
+      </a>
+      <a class="px-3" href="https://twitter.com/Potato__Code">
+        <i class="bi bi-twitter"></i>
+      </a>
+      <a class="px-3" href="https://www.instagram.com/potatocode_/">
+        <i class="bi bi-instagram"></i>
+      </a>
+    </div>
+  </footer>
 
 
   <!-- JS -->
