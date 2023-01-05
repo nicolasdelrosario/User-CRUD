@@ -4,6 +4,8 @@ This project allows users to create, read, update and delete **(CRUD)** user dat
 
 It includes a simple web interface that communicates with a serverless function to store the data in a database.
 
+<img src="./.github/CRUD.drawio.svg">
+
 ## Technologies Used
 
 - HTML
