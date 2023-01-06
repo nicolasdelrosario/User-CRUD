@@ -1,0 +1,16 @@
+packages:
+  - name: user
+    environment:
+      HOST: "${HOST}"
+      DATABASE: "${DATABASE}"
+      USERNAME: "${USERNAME}"
+      PASSWORD: "${PASSWORD}"
+    functions:
+      - name: createUser
+        runtime: php:default
+      - name: deleteUser
+        runtime: php:default
+      - name: getUser
+        runtime: php:default
+      - name: updateUser
+        runtime: php:default

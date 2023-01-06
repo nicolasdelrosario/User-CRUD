@@ -5,15 +5,14 @@
 function user() {
   // Gets user data from the server and displays it in a table
   const readData = () => {
-    const route =
-      "https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-63d0eec1-53fa-417b-8052-e630ca4a896b/default/user-php";
+    const route = "https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-8a19b075-ffe0-4877-93d5-e0a327e5c316/user/getUser";
     fetch(route)
       .then((response) => response.json())
       .then((data) => fillTable(data));
   };
   readData();
 
-   // Fills the table with user data
+  // Fills the table with user data
   const fillTable = (data) => {
     let tableContent = "";
     data.forEach((item) => {
@@ -73,7 +72,7 @@ function user() {
     document.querySelector('#txtLastName').value = '';
     document.querySelector('#txtOccupation').value = '';
 
-    const route = "https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-63d0eec1-53fa-417b-8052-e630ca4a896b/default/user-add-php";
+    const route = "https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-8a19b075-ffe0-4877-93d5-e0a327e5c316/user/createUser";
     const _data = {
       name,
       lastname,
@@ -100,7 +99,7 @@ function user() {
     const lastname = document.querySelector("#txtLastNameUpdate").value;
     const occupation = document.querySelector("#txtOccupationUpdate").value;
 
-    const route = "https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-63d0eec1-53fa-417b-8052-e630ca4a896b/default/user-edit-php";
+    const route = "https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-8a19b075-ffe0-4877-93d5-e0a327e5c316/user/updateUser";
     const _data = {
       iduser,
       name,
@@ -124,7 +123,7 @@ function user() {
   document.querySelector("#deleteButton").addEventListener("click", () => {
     const iduser = document.querySelector("#txtIdUserDelete").value
 
-    const route = 'https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-63d0eec1-53fa-417b-8052-e630ca4a896b/default/user-delete-php';
+    const route = 'https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-8a19b075-ffe0-4877-93d5-e0a327e5c316/user/deleteUser';
     const _data = {
       iduser
     }
