@@ -1,8 +1,8 @@
 # User CRUD
 
 This project allows users to create, read, update and delete **(CRUD)** user data.
-
-It includes a simple web interface that communicates with a serverless function to store the data in a database.
+ 
+It includes a simple web interface that communicates with a serverless function to store the data in a database. [click here](https://user-crud-theta.vercel.app/)
 
 <img src="./.github/CRUD.drawio.svg">
 
@@ -15,6 +15,7 @@ It includes a simple web interface that communicates with a serverless function 
 - Serverless Function
 - PHP
 - MySQL
+- Vercel
 
 ## Features
 
