@@ -5,10 +5,9 @@ function main(array $args) : array
     $username = getenv("USERNAME");
     $password = getenv("PASSWORD");
     $database = getenv("DATABASE");
-    header("Access-Control-Allow-Origin: *");
 
     $mysqli = mysqli_init();
-    $mysqli->ssl_set(NULL, NULL, "/etc/ssl/certs/ca-certificates.crt", NULL, NULL);
+    $mysqli->ssl_set(null, null, "/etc/ssl/certs/ca-certificates.crt", null, null);
     $mysqli->real_connect($host, $username, $password, $database);
 
     $iduser = $args["iduser"];

@@ -15,6 +15,3 @@ insert into user(name, lastname, occupation) values('Noelle', 'Pasion', 'Apple D
 insert into user(name, lastname, occupation) values('Geremy', 'Ocsa', 'FullStack Developer');
 insert into user(name, lastname, occupation) values('Frank', 'Rivas', 'Database Developer');
 insert into user(name, lastname, occupation) values('Andrés', 'Pereda', 'Designer UI');
-
-
-
