@@ -1,11 +1,8 @@
 // CRUD: CREATE READ UPDATE DELETE
-// Nicolas Robinson Del Rosario Lozano
-// 05/01/22
-
 function user() {
   // Gets user data from the server and displays it in a table
   const readData = () => {
-    const route = "https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-8a19b075-ffe0-4877-93d5-e0a327e5c316/user/getUser";
+    const route = "https://user.nicolasdelrosario.com/api/user/getUser";
     fetch(route)
       .then((response) => response.json())
       .then((data) => fillTable(data));
@@ -72,7 +69,7 @@ function user() {
     document.querySelector('#txtLastName').value = '';
     document.querySelector('#txtOccupation').value = '';
 
-    const route = "https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-8a19b075-ffe0-4877-93d5-e0a327e5c316/user/createUser";
+    const route = "https://user.nicolasdelrosario.com/api/user/createUser";
     const _data = {
       name,
       lastname,
@@ -85,10 +82,7 @@ function user() {
       headers: { "Content-type": "application/json; charset=UTF-8" },
     })
       .then((response) => response.json())
-      .then((json) => {
-        // console.log(json);
-        readData();
-      });
+      .then((json) => readData());
   });
 
 
@@ -99,7 +93,7 @@ function user() {
     const lastname = document.querySelector("#txtLastNameUpdate").value;
     const occupation = document.querySelector("#txtOccupationUpdate").value;
 
-    const route = "https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-8a19b075-ffe0-4877-93d5-e0a327e5c316/user/updateUser";
+    const route = "https://user.nicolasdelrosario.com/api/user/updateUser";
     const _data = {
       iduser,
       name,
@@ -113,17 +107,14 @@ function user() {
       headers: { "Content-type": "application/json; charset=UTF-8" },
     })
       .then((response) => response.json())
-      .then((json) => {
-        // console.log(json);
-        readData();
-      });
+      .then((json) => readData());
   });
 
   //DELETE USER
   document.querySelector("#deleteButton").addEventListener("click", () => {
     const iduser = document.querySelector("#txtIdUserDelete").value
 
-    const route = 'https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-8a19b075-ffe0-4877-93d5-e0a327e5c316/user/deleteUser';
+    const route = 'https://user.nicolasdelrosario.com/api/user/deleteUser';
     const _data = {
       iduser
     }
@@ -134,10 +125,7 @@ function user() {
       headers: { "Content-type": "application/json; charset=UTF-8" },
     })
       .then((response) => response.json())
-      .then((json) => {
-        // console.log(json);
-        readData();
-      });
+      .then((json) => readData());
   });
 }
 user();
