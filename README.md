@@ -1,8 +1,8 @@
 # User CRUD
 
-This project allows users to create, read, update and delete **(CRUD)** user data.
- 
-It includes a simple web interface that communicates with a serverless function to store the data in a database. [click here](https://user.nicolasdelrosario.com/)
+This project allows users to create, read, update and delete (CRUD) user data.
+
+It includes a simple web interface that communicates with a serverless function to store the data in a serverless database. [click here](https://user.nicolasdelrosario.com/)
 
 <img src="./.github/CRUD.svg">
 
