@@ -4,10 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Nicolas Del Rosario">
+  <meta name="description" content="This project allows users to create, read, update and delete (CRUD) data.">
+  <meta name="keywords" content="HTML, CSS, JavaScript, MySQL, PHP">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Users CRUD</title>
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link rel="icon" type="image/png" href="./assets/user-favicon.png">
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -15,7 +18,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
   <!-- CSS -->
   <link rel="stylesheet" href="./styles.css">
-
   <!-- Fonts -->
   <!-- Josefin Sans - Titles -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,13 +71,10 @@
           <th>Update</th>
           <th>Delete</th>
         </thead>
-        <tbody id="userData">
-
-        </tbody>
+        <tbody id="userData"></tbody>
       </table>
     </div>
-
-    <!-- Modal -->
+    <!-- Modal Update -->
     <div class="modal fade" id="modal-update" tabindex="-1" aria-labelledby="modalUpdate" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -99,13 +98,13 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="button btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button id="updateButton" type="button" class="button button-primary" data-bs-dismiss="modal">Update</button>
+            <button id="updateButton" type="button" class="button button-primary"
+              data-bs-dismiss="modal">Update</button>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Modal -->
+    <!-- Modal Delete -->
     <div class="modal fade" id="modal-delete" tabindex="-1" aria-labelledby="modalDelete" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
