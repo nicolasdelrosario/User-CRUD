@@ -2,12 +2,9 @@
   <h1>User CRUD</h1>
   <br>
   <p> This project allows users to create, read, update and delete (CRUD) user data.</p>
-  <p>It includes a simple web interface that communicates with a serverless function to store the data in a serverless database. <a title="click here" target="_blank" href="https://user.nicolasdelrosario.com/">click here</a>.</p>. 
-</div>
-
-<p align="center">
+  <p>It includes a simple web interface that communicates with a serverless function to store the data in a serverless database. <a title="click here"          target="_blank" href="https://user.nicolasdelrosario.com/">click here</a></p> <br>
   <img src="./.github/CRUD.svg" alt="System CRUD">
-</p>
+</div>
 
 <h2>| Technologies Used</h2>
 <ul>
@@ -22,13 +19,27 @@
   <li>Planet Scale: Serverless MySQL</li>
 </ul>
 
-
 <h2>| Features</h2>
 <ul>
-  <li><b>C</b>reate a new user with name, last name and occupation.</li>
-  <li><b>R</b>ead a list of all users with their name, lastname and occupation.</li>
-  <li><b>U</b>pdate the name, last name, or occupation of an existing user.</li>
-  <li><b>D</b>elete an existing user.</li>
+  <li><b>C</b>reate a new user with name, last name and occupation.</li> <br>
+  <div align="center">
+    <img src="https://res.cloudinary.com/dlghcisov/image/upload/v1674071388/projects/User-CRUD/Create-User_voympn.gif" alt="Creade User" width="800"            height="450"></img>
+  </div> <br>
+  
+  <li><b>R</b>ead a list of all users with their name, lastname and occupation.</li> <br>
+  <div align="center">
+    <img src="https://res.cloudinary.com/dlghcisov/image/upload/v1674072476/projects/User-CRUD/Read-User.png" alt="Read User" width="800" height="450">         </img>
+  </div> <br>
+  
+  <li><b>U</b>pdate the name, last name, or occupation of an existing user.</li> <br>
+  <div align="center">
+    <img src="https://res.cloudinary.com/dlghcisov/image/upload/v1674071436/projects/User-CRUD/Update-User_b3xxjx.gif" alt="test" width="800" height="450">     </img>
+  </div> <br>
+  
+  <li><b>D</b>elete an existing user.</li> <br>
+  <div align="center">
+    <img src="https://res.cloudinary.com/dlghcisov/image/upload/v1674071391/projects/User-CRUD/Delete-User_nb4bcy.gif" alt="test" width="800" height="450">     </img>
+  </div> <br>
 </ul>
 
 <h2>| License</h2>
